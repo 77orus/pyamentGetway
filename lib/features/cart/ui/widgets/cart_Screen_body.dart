@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:payment_getway/core/utils/app_images.dart';
 import 'package:payment_getway/core/utils/font_styles.dart';
+import 'package:payment_getway/core/widgets/custom_elevated_button.dart';
+import 'package:payment_getway/features/cart/ui/screens/payment_Details_screen.dart';
 import 'package:payment_getway/features/cart/ui/widgets/order_details.dart';
 
 class CartScreenBody extends StatelessWidget {
@@ -44,22 +46,16 @@ class CartScreenBody extends StatelessWidget {
           const SizedBox(
             height: 16,
           ),
-          SizedBox(
-            width: double.infinity,
-            height: 70,
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xff34A853),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+          CustomElevatedButton(
+            title: "Complete Order",
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const PaymentDetailsScreen(),
                 ),
-              ),
-              child: const Text(
-                "Complete Order",
-                style: FontStyles.font22,
-              ),
-            ),
+              );
+            },
           ),
           const SizedBox(
             height: 16,

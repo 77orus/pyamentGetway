@@ -6,10 +6,16 @@ class FontStyles {
     color: Colors.black,
     fontWeight: FontWeight.w400,
   );
+  static const TextStyle font18Bold = TextStyle(
+    fontSize: 18,
+    color: Colors.black,
+    fontWeight: FontWeight.w600,
+  );
 
   static TextStyle font20 = TextStyle(
-    fontSize: 16,
+    fontSize: 20,
     color: Colors.black.withOpacity(0.7),
+    fontWeight: FontWeight.w400,
   );
 
   static const TextStyle font22 = TextStyle(
